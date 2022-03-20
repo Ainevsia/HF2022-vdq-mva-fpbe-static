@@ -169,3 +169,4 @@ while True:
 
 - VM改编自[Armax/AVM](https://github.com/Armax/AVM)，Great Thanks to original author
 - docker调试的时候偏移非常不稳定，docker-compose中加个调试启动参数也会使得libc段和ld段之间的偏移发生改变
+- 因为觉得偏移可能是个问题，所以给出dockerfile

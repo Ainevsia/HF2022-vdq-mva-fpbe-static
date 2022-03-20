@@ -134,4 +134,4 @@ exp中可以替换目标合约和所给的gas，~~（便于爆破）~~
 ## Side Note
 
 - Infrustructure code: Great Thanks to [chainflag/eth-challenge-base](https://github.com/chainflag/eth-challenge-base).
-- London Harkfork引入的[eip-1559](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-1559.md)增加了冷热gas的区别，从genesis.json可以看出题目服务器环境还在Istanbul，不涉及冷热gas
+- [London Harkfork](https://ethereum.org/en/history/)引入的[eip-1559](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-1559.md)增加了冷热gas的区别，从genesis.json可以看出题目服务器环境还在Istanbul，不涉及冷热gas

@@ -10,7 +10,7 @@ Just a rust program
 
 [CVE-2020-36318](https://www.cvedetails.com/cve/CVE-2020-36318/): Rust 1.48.0 VecDeque::make_contiguous() 存在double free漏洞。[最小demo](https://github.com/rust-lang/rust/issues/79808)
 
-逆向得到关键数据结构如下
+关键数据结构
 
 ```rust
 struct Note {

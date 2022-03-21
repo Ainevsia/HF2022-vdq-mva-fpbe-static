@@ -8,7 +8,7 @@ Just a simple program
 
 ## Solution
 
-普通VM Pwn，逆向发现
+普通VM Pwn，漏洞点：
 - mul指令没有对第二个操作数进行校验存在oob read
 - mv指令没有对第二个操作数进行校验存在oob write
 
@@ -16,6 +16,8 @@ Just a simple program
 - oob read溢出读libc和栈的地址
 - oob write写sp计数器
 - 最后 push指令改exit_hook到one_gadget
+
+> 阅读选手赛后提交的WP后意识到大部分选手的思路都比上述要好，这里只贴出菜🐔出题人的exp
 
 由于ASLR存在，VM又是16bit字长的，需要爆破。
 
@@ -160,6 +162,8 @@ while True:
         p.close()
         pass
 ```
+
+
 
 ## Flag
 

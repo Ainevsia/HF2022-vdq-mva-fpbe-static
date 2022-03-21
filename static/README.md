@@ -67,6 +67,8 @@ contract Challenge {
 
 要求`extcodesize(msg.sender) < 0x80`，用solidity源码编译出来的是不可能满足这个要求的，需要选手自己手写EVM字节码，0x80不是一个很紧的限制，足以完成题目所要求的功能。
 
+> 阅读选手赛后提交的WP后意识到0x80限制可以使用proxy合约绕过，详见[EIP-1167: Minimal Proxy Contract](https://eips.ethereum.org/EIPS/eip-1167)
+
 手写字节码可以真的手写，也可以使用工具，如 [ethereum/py-evm](https://github.com/ethereum/py-evm)和[Ainevsia/evm-assembler](https://github.com/Ainevsia/evm-assembler)，省去一些手动计算jump地址的烦恼。
 
 下面以出题人写的[字节码](https://github.com/Ainevsia/evm-assembler/blob/main/gas.txt)为例：
@@ -135,3 +137,4 @@ exp中可以替换目标合约和所给的gas，~~（便于爆破）~~
 
 - Infrustructure code: Great Thanks to [chainflag/eth-challenge-base](https://github.com/chainflag/eth-challenge-base).
 - [London Harkfork](https://ethereum.org/en/history/)引入的[eip-1559](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-1559.md)增加了冷热gas的区别，从genesis.json可以看出题目服务器环境还在Istanbul，不涉及冷热gas
+- 阅读选手赛后提交的WP后意识到21年[首届中国可信区块链安全攻防大赛](https://www.scba.org.cn/?list_9.html)上出现过类似赛题
